@@ -1,0 +1,93 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Price Comparison</title>
+  {% load static %}
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{% static 'product1.css' %}">
+
+  
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="main-container">
+    <div class="nav-menu container">
+      <h1>
+        <img class="logo" src="{%static 'logo1.png' %}" alt="" />Price
+        Comparison
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="http://127.0.0.1:8000/">Home</a></li>
+          <li><a href="http://127.0.0.1:8000/#product">Products</a></li>
+          <li><a href="http://127.0.0.1:8000/#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main>
+    <section class="price-comparison">
+      <div class="price-column">
+        <div class="price-header">
+          <div class="logo">
+            <img src="{% static  'amazon.png' %}" alt="" />
+          </div>
+          <div class="product">
+            <h2>{{a}}</h1>
+          </div>
+          <div class="price">
+            {{b}}
+          </div>
+          <div class="rating">
+            {{a_rate}}
+          </div>
+          <div class="site-name">AMAZON</div>
+          <h2>{{expectA}}</h1>
+          <h2>{{expectA1}}</h1>
+        </div>
+        <div class="divider"></div>
+        <button class="cta"><a href="https://www.amazon.in/{{a}}/s?k={{a}}" target="_blank"> URL For Price</a></button>
+        <div class="divider"></div>
+
+      </div>
+      <div class="price-column">
+        <div class="price-header">
+          <div class="logo">
+            <img src="{% static  'Flipkart.png' %}" alt="" />
+          </div>
+          <div class="product">
+            <h2>{{c}}</h1>
+          </div>
+          <div class="price">
+            {{d}}
+          </div>
+          <div class="rating">
+            {{f_rate}} 
+          </div>
+          <div class="site-name">FLIPKART</div>
+          <h2>{{expectF}}</h2>
+        </div>
+        <div class="divider"></div>
+        <button class="cta"><a
+            href="https://www.flipkart.com/search?q={{c}}&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off" target="_blank">URL
+            For Price</a></button>
+        <div class="divider"></div>
+      </div>
+      
+
+      </div>
+    </section>
+
+  </main>
+  
+
+</body>
+
+</html>

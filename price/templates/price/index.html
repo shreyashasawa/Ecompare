@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style1.css' %}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet"/>
+
+  <title>Product Price Comparison</title>
+</head>
+  
+<body>
+  {% load static %}
+
+  <!-- Nav-Menu -->
+  <div class="main-container">
+    <div class="nav-menu container">
+      <h1>
+        <img class="logo" src="{%static 'logo1.png' %}" alt="" />Price
+        Comparison
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="#product">Products</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <!-- Home-section -->
+    <section class="Home-section">
+      <div class="btn-form container">
+        <h2>
+          You want lower prices, <br />
+          we hear you
+        </h2>
+        <form action="/next1" method="GET">
+          <input
+            class="btn-input"
+            type="text"
+            name="text"
+            placeholder="Enter Product Name"
+          />
+          <button class="btn-search" href="">Search</button>
+        </form>
+      </div>
+      <div class="back-img">
+        <img src="{%static 'matebook.png' %}" />
+      </div>
+    </section>
+  </div>
+
+  
+  <!-- Product-Section -->
+  <section id="product" class="products-section container">
+    <h3>
+      Products
+      <div class="divider"></div>
+    </h3>
+    <div class="product-card">
+      <div  class="card">
+        <div class="card-img">
+          <img src="{%static '710weRkP-nL._SL1500_.jpg' %}" alt="" />
+        </div>
+        <div class="card-content">
+          <h5>Samsung M61 (Electric Blue, 6GB RAM, 128GB Storage)</h5>
+          <span>₹22,999</span>
+        </div>
+        <form
+          action="https://www.amazon.in/Samsung-Galaxy-Electric-Blue-128GB-Storage/dp/B085J1J32G/ref=sr_1_1?dchild=1&keywords=samsung+F62&qid=1614615184&sr=8-1"
+        >
+          <button class="btn-url" href="">View Details</button>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="{%static '71OGgziqWvL._SL1500_.jpg' %}" alt="" />
+        </div>
+        <div class="card-content">
+          <h5>New Apple Watch Series 6 (GPS, 44mm) - Space Grey Aluminium</h5>
+          <span>₹43,900</span>
+        </div>
+        <form
+          action="https://www.amazon.in/New-Apple-Watch-GPS-44mm-Aluminium/dp/B08J6FCFVN/ref=sr_1_4?crid=2N2ZOLT911FIS&dchild=1&keywords=apple+watch+series+6&qid=1614617258&sprefix=apple+wa%2Caps%2C1000&sr=8-4"
+        >
+          <button class="btn-url" href="">View Details</button>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="{%static '61MbLLagiVL._SL1000_.jpg' %}" alt="" />
+        </div>
+        <div class="card-content">
+          <h5>All-new Echo Dot (4th Gen) | Next generation smart speaker (Blue)</h5>
+          <span>₹3900</span>
+        </div>
+        <form
+          action="https://www.amazon.in/Echo-Dot-4th-Gen-Blue/dp/B084KSRFXJ/ref=sr_1_3?dchild=1&keywords=echo+dot&qid=1614617530&sr=8-3"
+        >
+          <button class="btn-url" href="">View Details</button>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-img">
+          <img src="{%static '41CIlQy09aL.jpg' %}" alt="" />
+        </div>
+        <div class="card-content">
+          <h5>ASUS VivoBook Flip 14 Intel Core i3-10110U 10th Gen 14-inch 2-in-1  </h5>
+          <span>₹50,490</span>
+        </div>
+        <form
+          action="https://www.amazon.in/ASUS-VivoBook-i3-10110U-Integrated-TP412FA-EC371TS/dp/B08B4VNMBC/ref=sr_1_8?dchild=1&keywords=foldable+laptop&qid=1614617642&sr=8-8"
+        >
+          <button class="btn-url" href="">View Details</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About-Section -->
+  <section id="about" class="about-section">
+    <div class="about-head container">
+      <h3>About
+        <div class="divider"></div>
+      </h3>
+      <div class="about-content">
+        <h4>Our Team</h4>
+        <ul>
+          <li><h5>Shreyash Sonawane</h5></li>
+          <li><h5>Athrav Ingole</h5></li>
+          <li><h5>Shreyash Asawa</h5></li>
+          <li><h5>Sanskar Sharma</h5></i></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
