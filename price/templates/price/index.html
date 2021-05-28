@@ -5,10 +5,16 @@
   <meta charset="UTF-8" />
   
   {% load static %}
-  <link rel="stylesheet" href="{% static 'style1.css' %}">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet"/>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  
   <title>Product Price Comparison</title>
 </head>
   
@@ -16,129 +22,121 @@
   {% load static %}
 
   <!-- Nav-Menu -->
-  <div class="main-container">
-    <div class="nav-menu container">
-      <h1>
-        <img class="logo" src="{%static 'logo1.png' %}" alt="" />Price
-        Comparison
-      </h1>
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="#product">Products</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </nav>
-    </div>
+  <section class="container-section">
+    <nav class="navbar-section">
+      <a href="#">  
+      <h1>Price Comparison</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-item" aria-current="page"><a class="nav-link" href="#home">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="#product">PRODUCTS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">ABOUT</a></li>
+      </ul>
 
-
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    
+    
     <!-- Home-section -->
-    <section class="Home-section">
-      <div class="btn-form container">
+    <div class="Home-section" id="home">
+      <div class="btn-form">
         <h2>
           You want lower prices, <br />
           we hear you
         </h2>
         <form action="/next1" method="GET">
-          <input
-            class="btn-input"
-            type="text"
-            name="text"
-            placeholder="Enter Product Name"
-          />
+          <input class="btn-input" type="text" name="text" placeholder="Enter Product Name">
           <button class="btn-search" href="">Search</button>
         </form>
       </div>
       <div class="back-img">
-        <img src="{%static 'matebook.png' %}" />
+        <img src="{%static '/images/matebook.png' %}" />
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   
   <!-- Product-Section -->
-  <section id="product" class="products-section container">
-    <h3>
-      Products
+  <section class="product-section" id="product">
+    <h3>PRODUCTS
       <div class="divider"></div>
     </h3>
-    <div class="product-card">
-      <div  class="card">
-        <div class="card-img">
-          <img src="{%static '710weRkP-nL._SL1500_.jpg' %}" alt="" />
+    <div class="product">
+        <div class="card">
+          <div class="card-img">
+            <img src="{% static '/images/710weRkP-nL._SL1500_.jpg' %}" alt="...">
         </div>
-        <div class="card-content">
-          <h5>Samsung M61 (Electric Blue, 6GB RAM, 128GB Storage)</h5>
-          <span>₹22,999</span>
+        <div class="card-body">
+          <h5 class="card-title">Samsung M61 (Electric Blue, 6GB RAM, 128GB Storage)</h5>
+          <p class="card-text">₹22,999</p>
+          <a href="https://www.amazon.in/Samsung-Galaxy-Electric-Blue-128GB-Storage/dp/B085J1J32G/ref=sr_1_1?dchild=1&keywords=samsung+F62&qid=1614615184&sr=8-1" target="_blank" class="btn btn-primary">View Details</a>
         </div>
-        <form
-          action="https://www.amazon.in/Samsung-Galaxy-Electric-Blue-128GB-Storage/dp/B085J1J32G/ref=sr_1_1?dchild=1&keywords=samsung+F62&qid=1614615184&sr=8-1"
-        >
-          <button class="btn-url" href="">View Details</button>
-        </form>
       </div>
       <div class="card">
         <div class="card-img">
-          <img src="{%static '71OGgziqWvL._SL1500_.jpg' %}" alt="" />
-        </div>
-        <div class="card-content">
-          <h5>New Apple Watch Series 6 (GPS, 44mm) - Space Grey Aluminium</h5>
-          <span>₹43,900</span>
-        </div>
-        <form
-          action="https://www.amazon.in/New-Apple-Watch-GPS-44mm-Aluminium/dp/B08J6FCFVN/ref=sr_1_4?crid=2N2ZOLT911FIS&dchild=1&keywords=apple+watch+series+6&qid=1614617258&sprefix=apple+wa%2Caps%2C1000&sr=8-4"
-        >
-          <button class="btn-url" href="">View Details</button>
-        </form>
+          <img src="{% static '/images/71OGgziqWvL._SL1500_.jpg' %}" alt="...">
       </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="{%static '61MbLLagiVL._SL1000_.jpg' %}" alt="" />
-        </div>
-        <div class="card-content">
-          <h5>All-new Echo Dot (4th Gen) | Next generation smart speaker (Blue)</h5>
-          <span>₹3900</span>
-        </div>
-        <form
-          action="https://www.amazon.in/Echo-Dot-4th-Gen-Blue/dp/B084KSRFXJ/ref=sr_1_3?dchild=1&keywords=echo+dot&qid=1614617530&sr=8-3"
-        >
-          <button class="btn-url" href="">View Details</button>
-        </form>
+      <div class="card-body">
+        <h5 class="card-title">New Apple Watch Series 6 (GPS, 44mm) - Space Grey Aluminium</h5>
+        <p class="card-text">₹43,900</p>
+        <a href="https://www.amazon.in/New-Apple-Watch-GPS-44mm-Aluminium/dp/B08J6FCFVN/ref=sr_1_4?crid=2N2ZOLT911FIS&dchild=1&keywords=apple+watch+series+6&qid=1614617258&sprefix=apple+wa%2Caps%2C1000&sr=8-4" target="_blank" class="btn btn-primary">View Details</a>
       </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="{%static '41CIlQy09aL.jpg' %}" alt="" />
-        </div>
-        <div class="card-content">
-          <h5>ASUS VivoBook Flip 14 Intel Core i3-10110U 10th Gen 14-inch 2-in-1  </h5>
-          <span>₹50,490</span>
-        </div>
-        <form
-          action="https://www.amazon.in/ASUS-VivoBook-i3-10110U-Integrated-TP412FA-EC371TS/dp/B08B4VNMBC/ref=sr_1_8?dchild=1&keywords=foldable+laptop&qid=1614617642&sr=8-8"
-        >
-          <button class="btn-url" href="">View Details</button>
-        </form>
-      </div>
+    </div>   
+    <div class="card">
+      <div class="card-img">
+        <img src="{% static '/images/61MbLLagiVL._SL1000_.jpg' %}" alt="...">
     </div>
+    <div class="card-body">
+      <h5 class="card-title">All-new Echo Dot (4th Gen) | Next generation smart speaker (Blue)</h5>
+      <p class="card-text">₹3900</p>
+      <a href="https://www.amazon.in/Echo-Dot-4th-Gen-Blue/dp/B084KSRFXJ/ref=sr_1_3?dchild=1&keywords=echo+dot&qid=1614617530&sr=8-3" target="_blank" class="btn btn-primary">View Details</a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-img">
+      <img src="{% static '/images/41CIlQy09aL.jpg' %}" alt="...">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">ASUS VivoBook Flip 14 Intel Core i3-10110U 10th Gen 14-inch 2-in-1</h5>
+    <p class="card-text">₹50,490</p>
+    <a href="https://www.amazon.in/ASUS-VivoBook-i3-10110U-Integrated-TP412FA-EC371TS/dp/B08B4VNMBC/ref=sr_1_8?dchild=1&keywords=foldable+laptop&qid=1614617642&sr=8-8" target="_blank" class="btn btn-primary">View Details</a>
+  </div>
+</div>
+    </div>    
   </section>
 
-
+  
   <!-- About-Section -->
-  <section id="about" class="about-section">
-    <div class="about-head container">
-      <h3>About
-        <div class="divider"></div>
-      </h3>
-      <div class="about-content">
-        <h4>Our Team</h4>
-        <ul>
-          <li><h5>Shreyash Sonawane</h5></li>
-          <li><h5>Athrav Ingole</h5></li>
-          <li><h5>Shreyash Asawa</h5></li>
-          <li><h5>Sanskar Sharma</h5></i></li>
-        </ul>
+  <footer id="contact" class="container-fluid size_footer about-section">
+    <div class="row py-3" >
+        <div class="col-12 col-md-4 links" >
+            <ul class="list-unstyled text-small text-center">
+                <li><a class="text-muted foot_head" href="#home">Home</a></li>
+                <li><a class="text-muted" href="#product">Product</a></li>
+                <li><a class="text-muted" href="#about">About</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-4 border-right border-left moral text-center">
+          <h4>Our Team</h4>
+          <ul>
+            <li><h5>Shreyash Sonawane</h5></li>
+            <li><h5>Athrav Ingole</h5></li>
+            <li><h5>Shreyash Asawa</h5></li>
+            <li><h5>Sanskar Sharma</h5></i></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 contact text-center">
+            
+        </div>
       </div>
-    </div>
-  </section>
+      </footer>
+
+  <script src="{% static 'js/product.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
