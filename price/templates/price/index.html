@@ -1,12 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="UTF-8" />
   
-  {% load static %}
   <!-- CSS -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style1.css' %}">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -19,7 +19,6 @@
 </head>
   
 <body>
-  {% load static %}
 
   <!-- Nav-Menu -->
   <section class="container-section">
@@ -41,7 +40,7 @@
       </div>
     </nav>
     
-    
+    {% block content %}
     <!-- Home-section -->
     <div class="Home-section" id="home">
       <div class="btn-form">
@@ -49,7 +48,7 @@
           You want lower prices, <br />
           we hear you
         </h2>
-        <form action="/next1" method="GET">
+        <form action="/next" method="GET">
           <input class="btn-input" type="text" name="text" placeholder="Enter Product Name">
           <button class="btn-search" href="">Search</button>
         </form>
@@ -110,7 +109,7 @@
     </div>    
   </section>
 
-  
+  {% endblock content %}
   <!-- About-Section -->
   <footer id="contact" class="container-fluid size_footer about-section">
     <div class="row py-3" >

@@ -1,94 +1,14 @@
-:root {
---accent-color: #78c4d4;
---btn-color: black;
---a-color: #fa1e0e;
---text-color: #f8f1f1;
---heading-font-family: "Nunito Sans", sans-serif;
-}
-
-html{
-  background-color: #78c4d4;
-}
-
-main {
-  margin: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--heading-font-family);
-}
-
-h2 {
-  font-size: 47px;
-  font-weight: 800;
-}
-
-/* Navbar */
-h1 {
-  font-size: 28px;
-  font-weight: 900;
-}
-
-a {
-  text-decoration: none;
-  font-size: 17px;
-  color: #050505;
-}
-
-a:hover {
-  color: var(--a-color);
-}
-
-li {
-  list-style: none;
-}
-
-.container {
-  margin: 0px 100px;
-}
-
-.main-container {
-  width: 100%;
-  background-color: var(--bg-color);
-}
 
 .logo {
   padding-right: 20px;
 }
 
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 10px 0;
-  padding-right: 100px;
-  font-family: var(--heading-font-family);
-}
-
-.nav-menu a {
-  padding: 5px 20px;
-  font-weight: 700;
-}
-
-.nav-menu ul {
-  display: flex;
-}
-
-.nav-menu li {
-  padding: 20px 10px;
-}
-
-
-/* main */
 .logo img{
   justify-content: center;
   width: 100px;
   height: 70px;
   display: inline-block;
-}
+} 
 
 .price-comparison {
   display: flex;
@@ -167,5 +87,5 @@ li {
   transform: scale(1.1);
   background-color: var(--a-color);
   color: var(--text-color);
-}
+} 
 
