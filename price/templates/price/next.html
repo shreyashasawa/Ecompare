@@ -2,10 +2,27 @@
 {% load static %}
 
   {% block content %}
-  
+  <section class="container-section">
+    <nav class="navbar-section">
+      <a href="#">  
+      <h1>Price Comparison</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-item" aria-current="page"><a class="nav-link" href="http://127.0.0.1:8000/#home">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/#product">PRODUCTS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">ABOUT</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
 
   <!-- Main -->
-  <main class="price-compare" >
+  <main class="price-compare" id="productprice">
     <section class="price-comparison">
       <div class="price-column">
         <div class="price-header">
@@ -61,6 +78,30 @@
     </section>
   </main>
 
+    <!-- About-Section -->
+    <footer id="contact" class="container-fluid size_footer about-section">
+      <div class="row py-3" >
+          <div class="col-12 col-md-4 links d-flex align-items-center justify-content-center" >
+              <ul class="list-unstyled text-small text-center">
+                  <li><a class="text-muted" href="http://127.0.0.1:8000/#home">Home</a></li>
+                  <li><a class="text-muted" href="#productprice">Product</a></li>
+                  <li><a class="text-muted" href="#about">About</a></li>
+              </ul>
+          </div>
+          <div class="col-12 col-md-4">
+            <ul>
+              <h4>Our Team</h4>
+              <li><h5>Shreyash Sonawane</h5></li>
+              <li><h5>Athrav Ingole</h5></li>
+              <li><h5>Shreyash Asawa</h5></li>
+              <li><h5>Sanskar Sharma</h5></i></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 contact text-center">
+              
+          </div>
+        </div>
+        </footer>
 
 
   

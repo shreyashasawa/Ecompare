@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   
   <!-- CSS -->
-  <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -19,6 +19,7 @@
 </head>
   
 <body>
+  {% block content %}
 
   <!-- Nav-Menu -->
   <section class="container-section">
@@ -29,7 +30,7 @@
       </button>
       <ul class="nav-menu">
         <li class="nav-item" aria-current="page"><a class="nav-link" href="#home">HOME</a></li>
-        <li class="nav-item"><a class="nav-link" href="#product">PRODUCTS</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/#product">PRODUCTS</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">ABOUT</a></li>
       </ul>
 
@@ -40,7 +41,6 @@
       </div>
     </nav>
     
-    {% block content %}
     <!-- Home-section -->
     <div class="Home-section" id="home">
       <div class="btn-form">
@@ -109,20 +109,19 @@
     </div>    
   </section>
 
-  {% endblock content %}
   <!-- About-Section -->
   <footer id="contact" class="container-fluid size_footer about-section">
     <div class="row py-3" >
-        <div class="col-12 col-md-4 links" >
+        <div class="col-12 col-md-4 links d-flex align-items-center justify-content-center" >
             <ul class="list-unstyled text-small text-center">
                 <li><a class="text-muted foot_head" href="#home">Home</a></li>
                 <li><a class="text-muted" href="#product">Product</a></li>
                 <li><a class="text-muted" href="#about">About</a></li>
             </ul>
         </div>
-        <div class="col-12 col-md-4 border-right border-left moral text-center">
-          <h4>Our Team</h4>
+        <div class="col-12 col-md-4">
           <ul>
+            <h4>Our Team</h4>
             <li><h5>Shreyash Sonawane</h5></li>
             <li><h5>Athrav Ingole</h5></li>
             <li><h5>Shreyash Asawa</h5></li>
@@ -134,8 +133,11 @@
         </div>
       </div>
       </footer>
+  {% endblock content %}
+
 
   <script src="{% static 'js/product.js' %}"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
+

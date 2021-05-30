@@ -16,26 +16,6 @@ body {
   --text-color: #fff;
 }
 
-h2 {
-  font-size: 47px;
-  padding-bottom: 50px;
-  font-weight: 800;
-}
-
-h3 {
-  font-size: 35px;
-  font-weight: 900;
-}
-
-h4 {
-  font-size: 29px;
-  font-weight: 800;
-}
-
-h5{
-  font-size: 15px;
-}
-
 a {
   text-decoration: none;
   font-size: 17px;
@@ -217,7 +197,7 @@ li {
 }
 
 .card img {
-  height: inherit;
+  height: 200px;
 }
 
 .btn-url {
@@ -241,13 +221,112 @@ li {
 
 /* About */
 .about-section{
-  height: 30vh;
   background-image: linear-gradient(to right top, #051937, #001a33, #001b2f, #001b29, #041b24);
   color: #fff;
   text-align: center;
 }
 
+/* Next Page */
+.price-compare{
+  position: relative;
+  top: 10vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.logo {
+  padding-right: 20px;
+}
+
+.logo img{
+  justify-content: center;
+  width: 100px;
+  height: 70px;
+  display: inline-block;
+} 
+
+.price-comparison {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin: 1rem;
+}
+
+.price-column {
+  background-color: var(--text-color);
+  box-shadow: 0 7px 30px rgba(52, 31, 97, 0.1);
+  padding: 2rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.price-column:first-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.price-column:last-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.price-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+}
+
+.price {
+  font-size: 3.5rem;
+  display: flex;
+}
+
+.divider1 {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .2);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.cta {
+  border: none;
+  background-image: linear-gradient(to right top, #4a74b3, #3d79b4, #307eb4, #2583b2, #1d87b0);
+  color: var(--text-color);
+  width: 100%;
+  padding: .75rem 1rem;
+  cursor: pointer;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 100ms;
+  transform: scale(1);
+}
+
+.cta:hover{
+  transform: scale(1.1);
+}
+  
+.cta a{
+  color: #fff;
+  text-decoration: none;
+} 
+
+.cta a:hover{
+  color: red;
+}
+
+
+/* Responsive */
 @keyframes drop {
   0% {
       opacity: 0;
@@ -327,107 +406,7 @@ li {
   top: 2vh;
   flex-wrap: wrap-reverse;
 }
-
 }
 
-/* Next Page */
-.price-compare{
-  position: relative;
-  top: 10vh;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.logo {
-  padding-right: 20px;
-}
-
-.logo img{
-  justify-content: center;
-  width: 100px;
-  height: 70px;
-  display: inline-block;
-} 
-
-.price-comparison {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  margin: 1rem;
-}
-
-.price-column {
-  background-color: var(--text-color);
-  box-shadow: 0 7px 30px rgba(52, 31, 97, 0.1);
-  padding: 2rem;
-  flex-grow: 1;
-  flex-basis: 0;
-  max-width: 400px;
-  border-radius: 8px;
-}
-
-.price-column:first-child {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.price-column:last-child {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-.price-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--heading-font-family);
-  font-weight: bold;
-}
-
-.price {
-  font-size: 3.5rem;
-  display: flex;
-}
-
-.divider1 {
-  height: 1px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .2);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: inline-block;
-}
-
-.cta {
-  border: none;
-  background-color: var(--btn-color);
-  color: var(--text-color);
-  width: 100%;
-  padding: .75rem 1rem;
-  cursor: pointer;
-  font-family: var(--heading-font-family);
-  font-weight: bold;
-  border-radius: 4px;
-  transition: 100ms;
-  transform: scale(1);
-}
-
-.cta a{
-    text-decoration: none;
-    color: #f8f1f1;
-  }
-
-.ctn a:hover {
-  color: var(--text-color);
-  }
-  
-.cta:hover{
-  transform: scale(1.1);
-  background-color: var(--a-color);
-  color: var(--text-color);
-} 
 
