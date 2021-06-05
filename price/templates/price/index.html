@@ -1,21 +1,25 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta charset="UTF-8" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8" />
+    
+    <!-- CSS -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'price/style.css' %}">
   
-  <!-- CSS -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet"/>
-
+  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  
-  <title>Product Price Comparison</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'images/cart2.png' %}" type="image/png">
+
+  <title>Onlinecompare</title>
 </head>
   
 <body>
@@ -25,7 +29,7 @@
   <section class="container-section">
     <nav class="navbar-section">
       <a href="#">  
-      <h1>Price Comparison</h1></a>
+      <h1><img src="{% static 'images/cart2.png' %}" style="width: 46px; height: 48px; ">Ecompare</h1></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       </button>
       <ul class="nav-menu">
@@ -48,7 +52,7 @@
           You want lower prices, <br />
           we hear you
         </h2>
-        <form action="/next" method="GET">
+        <form action="/next" method="GET" style="margin-top: 50px;">
           <input class="btn-input" type="text" name="text" placeholder="Enter Product Name">
           <button class="btn-search" href="">Search</button>
         </form>
