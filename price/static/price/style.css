@@ -67,7 +67,7 @@ li {
 }
 
 .navbar-section h1{
-  font-size: 1.7rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: var(--text);
   margin-left: 4.3rem;
@@ -405,6 +405,12 @@ li {
   position: relative;
   top: 2vh;
   flex-wrap: wrap-reverse;
+}
+
+.product{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 }
 
