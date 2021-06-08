@@ -1,9 +1,9 @@
+from django.shortcuts import render
+
 from bs4 import BeautifulSoup
 import requests
-import time
 
-from django.http import HttpResponse
-from django.shortcuts import render
+
 
 def index(request):
     return render(request, 'price/index.html')
@@ -29,17 +29,19 @@ def next(request):
     if amazon == "on":
         try:
             amazon = f'https://www.amazon.in/{name1}/s?k={name2}'
-            res = requests.get(
-                f'https://www.amazon.in/{name1}/s?k={name2}', headers=headers)
+            res = requests.get(f'https://www.amazon.in/{name1}/s?k={name2}', headers=headers)
             print("\nSearching in amazon:")
+
             soup = BeautifulSoup(res.text, 'html.parser')
             amazon_page = soup.select('.a-color-base.a-text-normal')
             amazon_page_length = int(len(amazon_page))
+
             for i in range(0, amazon_page_length):
                 name = name.upper()
                 amazon_name = soup.select(
                     '.a-color-base.a-text-normal')[i].getText().strip().upper()
                 ren = "Renewed"
+
                 if (name in amazon_name[0:20]) and (ren not in amazon_name[0:20]):
                     amazon_name = soup.select(
                         '.a-color-base.a-text-normal')[i].getText().strip().upper()
@@ -61,18 +63,21 @@ def next(request):
                         amazon_price = 'No Product Price Found'
                         infor.append(amazon_price[0:2])
                         break
+
             infor.append(amazon_name)
             infor.append("₹" + amazon_price)
             rate.append(a_rating)
+
         except:
             print("amazon: No product found!")
             print("-----------------------")
             amazon_price = 'Product Price Not found!'
             infor.append(amazon_price)
-            return render(request, 'price/next.html',
-                          {'expectF': infor[2:4], 'expectA': infor[0:1], 'expectA1': infor[1:2]})
 
+            context = {'expectF': infor[2:4], 'expectA': infor[0:1], 'expectA1': infor[1:2]}
+            return render(request, 'price/next.html', context)
         print(infor)
+
 
     if flipkart == "on":
         try:
@@ -80,13 +85,13 @@ def next(request):
             name1 = name.replace(" ", "+")  
             name2 = name.replace(" ", "+")
             flipkart = f'https://www.flipkart.com/search?q={name1}&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off'
-            res = requests.get(
-                f'https://www.flipkart.com/search?q={name1}&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off',
-                headers=headers)
+            res = requests.get(f'https://www.flipkart.com/search?q={name1}&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off', headers=headers)
             print("\nSearching in flipkart....")
+            \
             soup = BeautifulSoup(res.text, 'html.parser')
             flipkart_name = soup.select('._4rR01T')[0].getText().strip()
             flipkart_name = flipkart_name.upper()
+            
             if name.upper() in flipkart_name:
                 flipkart_price = soup.select('._1_WHN1')[0].getText().strip()
                 flipkart_name = soup.select('._4rR01T')[0].getText().strip()
@@ -104,12 +109,15 @@ def next(request):
                 print("-----------------------")
                 flipkart_price = 'No Product Price Found'
                 infor.append(flipkart_price)
+        
         except:
             print("Flipkart:No product found!")
             print("-----------------------")
             flipkart_price = 'Product Price Not found!'
             infor.append(flipkart_price)
-            return render(request, 'price/next.html',
-                          {'expectF': infor[2:], 'expectA': infor[0:1], 'expectA1': infor[1:2]})
-
-    return render(request, 'price/next.html', {'a': infor[0], 'b': infor[1], 'c': infor[2], 'd': infor[3], 'e': infor[4:], 'a_rate': rate[0], 'f_rate':rate[1]})
+            
+            context1 = {'expectF': infor[2:], 'expectA': infor[0:1], 'expectA1': infor[1:2]}
+            return render(request, 'price/next.html', context1 )
+    
+    context =  {'a': infor[0], 'b': infor[1], 'c': infor[2], 'd': infor[3], 'e': infor[4:], 'a_rate': rate[0], 'f_rate':rate[1]}
+    return render(request, 'price/next.html', context)
