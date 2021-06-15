@@ -3,21 +3,15 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="UTF-8" />
-  
   {% load static %}
-  <link rel="stylesheet" href="{% static 'css/style1.css' %}">
-  
+  <link rel="stylesheet" href="{% static 'css/style1.css' %}">  
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet"/>
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
   <link rel="shortcut icon" href="{% static 'images/cart2.png' %}" type="image/png">
-
   <title>Ecompare</title>
 </head>
-  
 <body>
   {% block content %}
   <section class="container-section">
@@ -28,7 +22,7 @@
       </button>
       <ul class="nav-menu">
         <li class="nav-item" aria-current="page"><a class="nav-link" href="#home">HOME</a></li>
-        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/#product">PRODUCTS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#product">PRODUCTS</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">ABOUT</a></li>
       </ul>
 
@@ -107,31 +101,31 @@
   </section>
 
 
-  <footer id="contact" class="container-fluid size_foote about-section about-section-wrap">
+  <footer id="contact" class="container-fluid size_footer about-section about-section-wrap">
     <div class="row py-3" >
         <div class="col-12 col-md-4 links d-flex align-items-center justify-content-center" >
-            <ul class="list-unstyled text-small text-center">
-                <li><a class="text-muted foot_head" href="#home">Home</a></li>
-                <li><a class="text-muted" href="#product">Product</a></li>
-                <li><a class="text-muted" href="#about">About</a></li>
+            <ul class="list-unstyled lead text-center">
+              <h2>Quick links</h2>
+              <li><a class="text-muted foot_head" href="#">Ecompare</a></li>
+              <li><a class="text-muted" href="#home">Home</a></li>
+              <li><a class="text-muted" href="#product">Product</a></li>
+              <li><a class="text-muted" href="#about">About</a></li>
             </ul>
         </div>
         <div class="col-12 col-md-4">
-          <ul>
-            <h4>Our Team</h4>
-            <li><h5>Shreyash Sonawane</h5></li>
-            <li><h5>Athrav Ingole</h5></li>
-            <li><h5>Shreyash Asawa</h5></li>
-            <li><h5>Sanskar Sharma</h5></i></li>
+          <ul style="padding-left: 0;">
+            <h2>About us</h2>
+            <li><a href="#" class="nav-link"><h5>Shreyash Sonawane</h5></a></li>
+            <li><a href="https://www.linkedin.com/in/atharv-ingole/" target="_blank" class="nav-link"><h5>Athrav Ingole</h5></a></li>
+            <li><a href="https://www.linkedin.com/in/shreyash-asawa" target="_blank" class="nav-link"><h5>Shreyash Asawa</h5></a></li>
+            <li><a href="https://www.linkedin.com/in/sanskarsharma100/" target="_blank" class="nav-link"><h5>Sanskar Sharma</h5></a></li>
           </ul>
         </div>
         <div class="col-12 col-md-4">
-
-        </div>
       </div>
-      </footer>
+    </div>
+  </footer>
   {% endblock content %}
-
 
   <script src="{% static 'js/product.js' %}"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
