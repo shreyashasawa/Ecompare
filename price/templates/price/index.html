@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="UTF-8" />
-  {% load static %}
+  <meta name="description" content="Ecompare🚀. A product price comparison website using web scraping implemented in Django framework💖. Scraping data from Amazon and Flipkart websites. Users can compare the price of similar products online.">
+  <meta name="theme-color" content="#121212">
   <link rel="stylesheet" href="{% static 'css/style1.css' %}">  
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet"/>
@@ -17,7 +19,7 @@
   <section class="container-section">
     <nav class="navbar-section">
       <a href="#">  
-      <h1><img src="{% static 'images/cart2.png' %}" style="width: 46px; height: 48px; ">Ecompare</h1></a>
+      <h1><img src="{% static 'images/cart2.png' %}" style="width: 46px; height: 48px; margin-right: 16px; ">Ecompare</h1></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       </button>
       <ul class="nav-menu">
@@ -103,25 +105,26 @@
 
   <footer id="contact" class="container-fluid size_footer about-section about-section-wrap">
     <div class="row py-3" >
-        <div class="col-12 col-md-4 links d-flex align-items-center justify-content-center" >
-            <ul class="list-unstyled lead text-center">
-              <h2>Quick links</h2>
-              <li><a class="text-muted foot_head" href="#">Ecompare</a></li>
-              <li><a class="text-muted" href="#home">Home</a></li>
-              <li><a class="text-muted" href="#product">Product</a></li>
-              <li><a class="text-muted" href="#about">About</a></li>
-            </ul>
-        </div>
-        <div class="col-12 col-md-4">
-          <ul style="padding-left: 0;">
-            <h2>About us</h2>
-            <li><a href="#" class="nav-link"><h5>Shreyash Sonawane</h5></a></li>
-            <li><a href="https://www.linkedin.com/in/atharv-ingole/" target="_blank" class="nav-link"><h5>Athrav Ingole</h5></a></li>
-            <li><a href="https://www.linkedin.com/in/shreyash-asawa" target="_blank" class="nav-link"><h5>Shreyash Asawa</h5></a></li>
-            <li><a href="https://www.linkedin.com/in/sanskarsharma100/" target="_blank" class="nav-link"><h5>Sanskar Sharma</h5></a></li>
+      <div class="col-12 col-md-4 links d-flex align-items-center justify-content-center" >
+          <ul class="list-unstyled lead text-center">
+            <h2>Quick links</h2>
+            <li><a class="text-muted foot_head" href="#">Ecompare</a></li>
+            <li><a class="text-muted" href="#home">Home</a></li>
+            <li><a class="text-muted" href="#product">Product</a></li>
+            <li><a class="text-muted" href="#about">About</a></li>
           </ul>
-        </div>
-        <div class="col-12 col-md-4">
+      </div>
+      <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+        <p class="lead"><strong>Copyright &copy; 2021 Ecompare🚀</strong></p>
+      </div>
+      <div class="col-12 col-md-5">
+        <ul style="padding-left: 0;">
+          <h2>About us</h2>
+          <li><a href="#" class="nav-link"><h5>Shreyash Sonawane</h5></a></li>
+          <li><a href="https://www.linkedin.com/in/atharv-ingole/" target="_blank" class="nav-link"><h5>Athrav Ingole</h5></a></li>
+          <li><a href="https://www.linkedin.com/in/shreyash-asawa" target="_blank" class="nav-link"><h5>Shreyash Asawa</h5></a></li>
+          <li><a href="https://www.linkedin.com/in/sanskarsharma100/" target="_blank" class="nav-link"><h5>Sanskar Sharma</h5></a></li>
+        </ul>
       </div>
     </div>
   </footer>
