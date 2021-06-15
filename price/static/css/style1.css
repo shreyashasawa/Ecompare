@@ -16,19 +16,13 @@ body {
   --text-color: #fff;
 }
 
-a {
-  text-decoration: none;
-  font-size: 17px;
-  color: #050505;
-}
-
-a:hover {
-  color: var(--btn-color);
-}
-
 li {
   list-style: none;
 }
+
+.about-section h5{
+  white-space: nowrap;
+} 
 
 .divider {
   height: 3px;
@@ -83,8 +77,12 @@ li {
   margin: 0 45px;
 }
 
-.navbar-section a:hover{
-  color: #ff7b54;
+.navbar-section h1:hover{
+  color: var(--text-color);
+}
+
+.nav-menu a:hover {
+  color: var(--btn-color);
 }
 
 .hamburger {
@@ -128,7 +126,7 @@ li {
   outline: none;
   border: none;
   cursor: text;
-  width: 500px;
+  width: 540px;
   font-size: 15px;
   height: 50px;
   background-color: #fff;
@@ -141,10 +139,10 @@ li {
 .btn-search {
   outline: none;
   border: none;
-  width: 150px;
+  width: 160px;
   height: 50px;
   cursor: pointer;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   background-image: linear-gradient(to right top, #4a74b3, #3d79b4, #307eb4, #2583b2, #1d87b0);
   color: var(--text-color);
   font-size: 15px;
@@ -194,13 +192,11 @@ li {
 }
 
 .col-lg-3 {
-  /* width: 20%; */
-  /* height: 60vh; */
-  /* display: flex; */
   margin: 0 2rem ;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* flex-direction: column; */
+}
+
+.col-lg-3 img {
+  height: 150px;
 }
 
 .card-img{
@@ -209,10 +205,6 @@ li {
   align-items: center;
 	width: 100%;
 	height: 35vh;
-}
-
-.col-lg-3 img {
-  height: 150px;
 }
 
 .btn-url {
@@ -241,6 +233,13 @@ li {
   text-align: center;
 }
 
+.about-section a{
+  color: var(--text-color);
+}
+
+.about-section a:hover{
+  color: var(--btn-color);
+}
 
 
 /* Next Page */
@@ -357,8 +356,8 @@ li {
 
 
 
-/* Responsive */
-@media only screen and (max-width: 1170px) {
+/* Responsive XXL */
+@media only screen and (max-width: 1200px) {
 .nav-menu {
   position: fixed;
   left: -100%;
@@ -385,6 +384,8 @@ li {
 .hamburger {
   display: block;
   cursor: pointer;
+  position: relative;
+  top: 1vh;
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -416,9 +417,8 @@ li {
 }
 }
 
-
-
-@media only screen and (max-width: 960px){
+/* Responsive large */
+@media only screen and (max-width: 992px){
 .product{
   position: relative;
   top: 10vh;
@@ -427,8 +427,34 @@ li {
 } 
 
 .about-section-wrap{
-  position: relative;
-  top: 140vh;
+  position: relative; 
+  top: 160vh;
 }  
 }
 
+/* Responsive medium */
+@media only screen and (max-width: 768px){
+  .Home-section{
+    top: 10vh;
+  }
+
+  .back-img{
+    margin-top: 3rem;
+    height: 40vh;
+  }  
+
+  .btn-form h2{
+    text-align: justify;
+    font-size: 2.5rem;
+  }
+
+  .btn-input{
+    width: 370px;
+  }
+
+  .btn-search{
+    width: 100px;
+  }
+
+
+}
