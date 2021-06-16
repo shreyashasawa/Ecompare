@@ -26,8 +26,7 @@ SECRET_KEY = 's*$6k^smpp0y6tj-hec=*^evjpl5mq(3a8sumfvrlz2m0d)jho'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['https://ecompare-app.herokuapp.com/']
 
 # Application definition
 
