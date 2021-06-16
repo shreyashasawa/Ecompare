@@ -2,6 +2,7 @@
 {% load static %}
 
   {% block content %}
+  
   <section class="container-section" id="home">
     <nav class="navbar-section">
       <a href="#">  
@@ -46,8 +47,8 @@
         <div class="divider1"></div>
         <button class="cta"><a href="https://www.amazon.in/{{a}}/s?k={{a}}" target="_blank"> URL For Price</a></button>
         <div class="divider1"></div>
-
       </div>
+
       <div class="price-column">
         <div class="price-header">
           <div class="logo">
@@ -76,32 +77,22 @@
     </section>
   </main>
 
-
   <footer id="contact" class="container-fluid size_footer about-section">
-    <div class="row py-3" >
-      <div class="col-12 col-md-4 links d-flex align-items-center justify-content-center" >
+    <div class="row py-5" >
+      <div class="col-12 links d-flex align-items-center justify-content-center" >
         <ul class="list-unstyled text-small text-center">
           <h2>Quick links</h2>
-          <li><a class="text-muted foot_head" href="#">Ecompare</a></li>
-          <li><a class="text-muted" href="{% url 'index' %}">Home</a></li>
+          <li><a class="text-muted foot_head" href="{% url 'index' %}">Ecompare</a></li>
+          <li><a class="text-muted" href="#">Home</a></li>
           <li><a class="text-muted" href="#productprice">Product</a></li>
           <li><a class="text-muted" href="#about">About</a></li>
-        </ul>
-      </div>
-      <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
-        <p class="lead"><strong>Copyright &copy; 2021 Ecompare🚀</strong></p>
-      </div>
-      <div class="col-12 col-md-5">
-        <ul style="padding-left: 0;">
-          <h4>Our Team</h4>
-          <li><a href="/price/index.html" class="nav-link"><h5>Shreyash Sonawane</h5></a></li>
-          <li><a href="https://www.linkedin.com/in/atharv-ingole/" target="_blank" class="nav-link"><h5>Athrav Ingole</h5></a></li>
-          <li><a href="https://www.linkedin.com/in/shreyash-asawa" target="_blank" class="nav-link"><h5>Shreyash Asawa</h5></a></li>
-          <li><a href="https://www.linkedin.com/in/sanskarsharma100/" target="_blank" class="nav-link"><h5>Sanskar Sharma</h5></a></li>
+          <p class="lead"><strong>Copyright &copy; 2021 Ecompare🚀</strong></p>
         </ul>
       </div>
     </div>
   </footer>
+
   {% endblock content %}
+
 </body>
 </html>

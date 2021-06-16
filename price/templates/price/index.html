@@ -4,18 +4,25 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="UTF-8" />
-  <meta name="description" content="Ecompare🚀. A product price comparison website using web scraping implemented in Django framework💖. Scraping data from Amazon and Flipkart websites. Users can compare the price of similar products online.">
-  <meta name="theme-color" content="#121212">
-  <link rel="stylesheet" href="{% static 'css/style1.css' %}">  
+  <meta name="description" content="Ecompare🚀. A product price comparison website using web scraping implemented in Django framework✨. Scraping data from Amazon and Flipkart websites. Users can compare the price of similar products online.">
+  <meta name="robots" content="index,follow">
+  <meta name="keywords" content="A Product Price Comparison, web scraping, Python Projects">
+  
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap" rel="stylesheet"/>
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  
   <link rel="shortcut icon" href="{% static 'images/cart2.png' %}" type="image/png">
-  <title>Ecompare</title>
+  
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+  
+  <title>Ecompare🚀 - A Product Price Comparison Website</title>
 </head>
 <body>
   {% block content %}
+
   <section class="container-section">
     <nav class="navbar-section">
       <a href="#">  
@@ -53,15 +60,14 @@
     </div>
   </section>
 
-  
   <section class="product-section" id="product">
     <h3>PRODUCTS
       <div class="divider"></div>
     </h3>
     <div class="product">
-        <div class="col-lg-3">
-          <div class="card-img">
-            <img src="{% static '/images/710weRkP-nL._SL1500_.jpg' %}" alt="...">
+      <div class="col-lg-3">
+        <div class="card-img">
+          <img src="{% static '/images/710weRkP-nL._SL1500_.jpg' %}" alt="...">
         </div>
         <div class="card-body">
           <h5 class="card-title">Samsung M61 (Electric Blue, 6GB RAM, 128GB Storage)</h5>
@@ -72,62 +78,52 @@
       <div class="col-lg-3">
         <div class="card-img">
           <img src="{% static '/images/71OGgziqWvL._SL1500_.jpg' %}" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">New Apple Watch Series 6 (GPS, 44mm) - Space Grey Aluminium</h5>
+          <p class="card-text">₹43,900</p>
+          <a href="https://www.amazon.in/New-Apple-Watch-GPS-44mm-Aluminium/dp/B08J6FCFVN/ref=sr_1_4?crid=2N2ZOLT911FIS&dchild=1&keywords=apple+watch+series+6&qid=1614617258&sprefix=apple+wa%2Caps%2C1000&sr=8-4" target="_blank" class="btn btn-primary">View Details</a>
+        </div>
+      </div>   
+      <div class="col-lg-3">
+        <div class="card-img">
+          <img src="{% static '/images/61MbLLagiVL._SL1000_.jpg' %}" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">All-new Echo Dot (4th Gen) | Next generation smart speaker (Blue)</h5>
+          <p class="card-text">₹3900</p>
+          <a href="https://www.amazon.in/Echo-Dot-4th-Gen-Blue/dp/B084KSRFXJ/ref=sr_1_3?dchild=1&keywords=echo+dot&qid=1614617530&sr=8-3" target="_blank" class="btn btn-primary">View Details</a>
+        </div>
       </div>
-      <div class="card-body">
-        <h5 class="card-title">New Apple Watch Series 6 (GPS, 44mm) - Space Grey Aluminium</h5>
-        <p class="card-text">₹43,900</p>
-        <a href="https://www.amazon.in/New-Apple-Watch-GPS-44mm-Aluminium/dp/B08J6FCFVN/ref=sr_1_4?crid=2N2ZOLT911FIS&dchild=1&keywords=apple+watch+series+6&qid=1614617258&sprefix=apple+wa%2Caps%2C1000&sr=8-4" target="_blank" class="btn btn-primary">View Details</a>
+      <div class="col-lg-3">
+        <div class="card-img">
+          <img src="{% static '/images/41CIlQy09aL.jpg' %}" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">ASUS VivoBook Flip 14 Intel Core i3-10110U 10th Gen 14-inch 2-in-1</h5>
+          <p class="card-text">₹50,490</p>
+          <a href="https://www.amazon.in/ASUS-VivoBook-i3-10110U-Integrated-TP412FA-EC371TS/dp/B08B4VNMBC/ref=sr_1_8?dchild=1&keywords=foldable+laptop&qid=1614617642&sr=8-8" target="_blank" class="btn btn-primary">View Details</a>
+        </div>
       </div>
-    </div>   
-    <div class="col-lg-3">
-      <div class="card-img">
-        <img src="{% static '/images/61MbLLagiVL._SL1000_.jpg' %}" alt="...">
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">All-new Echo Dot (4th Gen) | Next generation smart speaker (Blue)</h5>
-      <p class="card-text">₹3900</p>
-      <a href="https://www.amazon.in/Echo-Dot-4th-Gen-Blue/dp/B084KSRFXJ/ref=sr_1_3?dchild=1&keywords=echo+dot&qid=1614617530&sr=8-3" target="_blank" class="btn btn-primary">View Details</a>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <div class="card-img">
-      <img src="{% static '/images/41CIlQy09aL.jpg' %}" alt="...">
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">ASUS VivoBook Flip 14 Intel Core i3-10110U 10th Gen 14-inch 2-in-1</h5>
-    <p class="card-text">₹50,490</p>
-    <a href="https://www.amazon.in/ASUS-VivoBook-i3-10110U-Integrated-TP412FA-EC371TS/dp/B08B4VNMBC/ref=sr_1_8?dchild=1&keywords=foldable+laptop&qid=1614617642&sr=8-8" target="_blank" class="btn btn-primary">View Details</a>
-  </div>
-</div>
     </div>    
   </section>
 
-
   <footer id="contact" class="container-fluid size_footer about-section about-section-wrap">
-    <div class="row py-3" >
-      <div class="col-12 col-md-4 links d-flex align-items-center justify-content-center" >
+    <div class="row py-5" >
+      <div class="col-12 links d-flex align-items-center justify-content-center" >
           <ul class="list-unstyled lead text-center">
             <h2>Quick links</h2>
             <li><a class="text-muted foot_head" href="#">Ecompare</a></li>
             <li><a class="text-muted" href="#home">Home</a></li>
             <li><a class="text-muted" href="#product">Product</a></li>
             <li><a class="text-muted" href="#about">About</a></li>
+            <hr>
+            <p class="lead"><strong>Copyright &copy; 2021 Ecompare🚀</strong></p>
           </ul>
-      </div>
-      <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
-        <p class="lead"><strong>Copyright &copy; 2021 Ecompare🚀</strong></p>
-      </div>
-      <div class="col-12 col-md-5">
-        <ul style="padding-left: 0;">
-          <h2>About us</h2>
-          <li><a href="#" class="nav-link"><h5>Shreyash Sonawane</h5></a></li>
-          <li><a href="https://www.linkedin.com/in/atharv-ingole/" target="_blank" class="nav-link"><h5>Athrav Ingole</h5></a></li>
-          <li><a href="https://www.linkedin.com/in/shreyash-asawa" target="_blank" class="nav-link"><h5>Shreyash Asawa</h5></a></li>
-          <li><a href="https://www.linkedin.com/in/sanskarsharma100/" target="_blank" class="nav-link"><h5>Sanskar Sharma</h5></a></li>
-        </ul>
       </div>
     </div>
   </footer>
+
   {% endblock content %}
 
   <script src="{% static 'js/product.js' %}"></script>
