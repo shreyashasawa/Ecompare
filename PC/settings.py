@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +25,7 @@ SECRET_KEY = 's*$6k^smpp0y6tj-hec=*^evjpl5mq(3a8sumfvrlz2m0d)jho'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://ecompare-app.herokuapp.com/']
+ALLOWED_HOSTS = ['https://ecompare-app.herokuapp.com']
 
 # Application definition
 
