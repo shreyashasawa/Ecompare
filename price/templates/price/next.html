@@ -1,98 +1,147 @@
-{% extends 'price/index.html' %}
-{% load static %}
+{% extends 'price/base.html' %} {% load static %} {% block content %}
 
-  {% block content %}
-  
-  <section class="container-section" id="home">
-    <nav class="navbar-section">
-      <a href="#">  
-        <h1><img src="{% static 'images/cart2.png' %}" style="width: 46px; height: 48px; ">Ecompare</h1></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      </button>
-      <ul class="nav-menu">
-        <li class="nav-item" aria-current="page"><a class="nav-link" href="#">HOME</a></li>
-        <li class="nav-item"><a class="nav-link" href="#product">PRODUCTS</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">ABOUT</a></li>
-      </ul>
+<section class="container-section" id="home">
+  <nav class="navbar-section">
+    <a href="#">
+      <h1>
+        <img
+          src="{% static 'images/cart2.png' %}"
+          style="width: 46px; height: 48px"
+        />Ecompare
+      </h1></a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    ></button>
+    <ul class="nav-menu">
+      <li class="nav-item" aria-current="page">
+        <a class="nav-link" href="{% url 'index' %}"
+          ><i class="bi bi-house-fill"></i>HOME</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact"
+          ><i class="bi bi-person-fill"></i>ABOUT</a
+        >
+      </li>
+    </ul>
 
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
 
   <main class="price-compare" id="productprice">
     <section class="price-comparison">
       <div class="price-column">
         <div class="price-header">
           <div class="logo">
-            <img src="{% static  'images/amazon.png' %}" style="width: 100px;
-            height: 70px;" alt="" />
+            <img
+              src="{% static  'images/amazon-icon.svg' %}"
+              style="width: 100px; height: 70px"
+              alt=""
+            />
           </div>
+          <div class="divider1"></div>
           <div class="product-info">
-            <h2>{{a}}</h1>
+            <span>{{amazonProduct}}</span>
           </div>
           <div class="price">
-            {{b}}
+            <span>{{amazonPrice}}</span>
           </div>
           <div class="rating">
-            {{a_rate}}
+            <span>{{amazonRating}}</span>
           </div>
           <div class="site-name">AMAZON</div>
-          <h2>{{expectA}}</h1>
-          <h2>{{expectA1}}</h1>
+          <span>{{expectA}}</span>
+          <span>{{expectA1}}</span>
         </div>
         <div class="divider1"></div>
-        <button class="cta"><a href="https://www.amazon.in/{{a}}/s?k={{a}}" target="_blank"> URL For Price</a></button>
+        <button class="cta">
+          <a href="https://www.amazon.in/{{a}}/s?k={{a}}" target="_blank">
+            URL For Price</a
+          >
+        </button>
         <div class="divider1"></div>
       </div>
 
       <div class="price-column">
         <div class="price-header">
           <div class="logo">
-            <img src="{% static  'images/Flipkart.png' %}" style="width: 100px;
-            height: 70px;" alt="" />
+            <img
+              src="{% static  'images/flipkart.svg' %}"
+              style="width: 100px; height: 70px"
+              alt=""
+            />
           </div>
+          <div class="divider1"></div>
           <div class="product-info">
-            <h2>{{c}}</h1>
+            <span>{{flipkartProduct}}</span>
           </div>
-          <div class="price">
-            {{d}}
-          </div>
+          <div class="price">{{flipkartPrice}}</div>
           <div class="rating">
-            {{f_rate}} 
+            <span>{{flipkarRating}}</span>
           </div>
           <div class="site-name">FLIPKART</div>
-          <h2>{{expectF}}</h2>
+          <span>{{expectF}}</span>
         </div>
         <div class="divider1"></div>
-        <button class="cta"><a
-            href="https://www.flipkart.com/search?q={{c}}&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off" target="_blank">URL
-            For Price</a></button>
+        <button class="cta">
+          <a
+            href="https://www.flipkart.com/search?q={{c}}&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off"
+            target="_blank"
+            >URL For Price</a
+          >
+        </button>
         <div class="divider1"></div>
-      </div>
       </div>
     </section>
   </main>
 
-  <footer id="contact" class="container-fluid size_footer about-section">
-    <div class="row py-5" >
-      <div class="col-12 links d-flex align-items-center justify-content-center" >
-        <ul class="list-unstyled text-small text-center">
-          <h2>Quick links</h2>
-          <li><a class="text-muted foot_head" href="{% url 'index' %}">Ecompare</a></li>
-          <li><a class="text-muted" href="#">Home</a></li>
-          <li><a class="text-muted" href="#productprice">Product</a></li>
-          <li><a class="text-muted" href="#about">About</a></li>
-          <p class="lead"><strong>Copyright &copy; 2021 Ecompare🚀</strong></p>
-        </ul>
+  <footer id="contact" class="container-fluid size_footer about-section-next">
+    <div class="row py-5">
+      <div class="col-12 align-items-center justify-content-center mb-5">
+        <h2>About us</h2>
+        <h4><a href="#">Shreyash Sonawane</a></h4>
+        <h4>
+          <a href="https://www.linkedin.com/in/atharv-ingole/" target="_blank"
+            >Atharv Ingole
+          </a>
+        </h4>
+        <h4>
+          <a href="https://www.linkedin.com/in/shr25/" target="_blank"
+            >Shreyash Asawa</a
+          >
+        </h4>
+        <h4>
+          <a
+            href="https://www.linkedin.com/in/sanskarsharma100/"
+            target="_blank"
+            >Sanskar Sharma</a
+          >
+        </h4>
+      </div>
+      <div class="col-12 align-items-center justify-content-center">
+        <div class="d-flex justify-content-end">
+          <a href="#"><i class="bi bi-arrow-up-circle-fill"></i></a>
+        </div>
+        <hr />
+        <p class="lead">
+          <strong
+            >Copyright &copy; 2021 Ecompare🚀 | Made with 🧡 for the people of
+            the internet</strong
+          >
+        </p>
       </div>
     </div>
   </footer>
-
-  {% endblock content %}
-
-</body>
-</html>
+</section>
+{% endblock content %}
