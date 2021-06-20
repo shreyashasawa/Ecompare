@@ -118,6 +118,6 @@ def next(request):
             
             context1 = {'expectF': infor[2:], 'expectA': infor[0:1], 'expectA1': infor[1:2]}
             return render(request, 'price/next.html', context1 )
-    
-    context =  {'a': infor[0], 'b': infor[1], 'c': infor[2], 'd': infor[3], 'e': infor[4:], 'a_rate': rate[0], 'f_rate':rate[1]}
+
+    context =  {'amazonProduct': infor[0], 'amazonPrice': infor[1], 'flipkartProduct': infor[2], 'flipkartPrice': infor[3], 'e': infor[4:], 'amazonRating': rate[0], 'flipkarRating':rate[1]}
     return render(request, 'price/next.html', context)
